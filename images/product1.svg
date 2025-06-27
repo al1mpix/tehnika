@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="300" height="300" fill="#f8f9fa"/>
+    <rect x="50" y="50" width="200" height="200" fill="#e9ecef"/>
+    <circle cx="150" cy="150" r="75" fill="#3498db"/>
+    <text x="150" y="150" font-family="Arial" font-size="24" fill="white" text-anchor="middle" dominant-baseline="middle">Товар 1</text>
+</svg> 
