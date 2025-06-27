@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Техника</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +7 (999) 123-45-67</span>
+                    <span><i class="fas fa-envelope"></i> info@tehnika.ru</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Техника</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn-search"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header" style="position:relative;overflow:hidden;">
+            <div class="container">
+                <h1>Контакты</h1>
+                <p>Свяжитесь с нами для консультации и заказа</p>
+                <svg class="hero-neon-bg" width="100%" height="120" viewBox="0 0 1200 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;bottom:0;z-index:0;pointer-events:none;">
+                    <defs>
+                        <linearGradient id="neon1" x1="0" y1="0" x2="1200" y2="120" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00f2fe"/>
+                            <stop offset="1" stop-color="#4facfe"/>
+                        </linearGradient>
+                    </defs>
+                    <polyline points="0,100 200,60 400,80 600,40 800,100 1000,60 1200,80" stroke="url(#neon1)" stroke-width="6" fill="none" filter="url(#glow)"/>
+                    <circle cx="200" cy="60" r="8" fill="#00f2fe" filter="url(#glow)"/>
+                    <circle cx="600" cy="40" r="10" fill="#4facfe" filter="url(#glow)"/>
+                    <circle cx="1000" cy="60" r="8" fill="#00f2fe" filter="url(#glow)"/>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </svg>
+            </div>
+        </section>
+
+        <section class="contacts-section">
+            <div class="container">
+                <div class="contacts-grid">
+                    <div class="contact-info-card">
+                        <h2>Контактная информация</h2>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h3>Адрес</h3>
+                                    <p>ТЦ Галерея, Санкт-Петербург</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h3>Телефон</h3>
+                                    <p>+7 (999) 123-45-67</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h3>Email</h3>
+                                    <p>info@tehnika.ru</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h3>Режим работы</h3>
+                                    <p>Пн-Пт: 9:00 - 20:00</p>
+                                    <p>Сб-Вс: 10:00 - 18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-card">
+                        <h2>Напишите нам</h2>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Ваше имя</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Сообщение</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2 class="section-title">Как нас найти</h2>
+                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/galereya/1105821859/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Галерея</a><a href="https://yandex.ru/maps/2/saint-petersburg/category/shopping_mall/184108083/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Торговый центр в Санкт‑Петербурге</a><a href="https://yandex.ru/maps/2/saint-petersburg/category/entertainment_center/184106372/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Развлекательный центр в Санкт‑Петербурге</a><iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&indoorLevel=1&ll=30.360613%2C59.927563&mode=search&oid=1105821859&ol=biz&source=mapframe&um=constructor%3A1b1e1b1e1b1e1b1e1b1e1b1e1b1e1b1e1b1e1b1e1b1e1b1e1b1e&utm_source=mapframe&z=17.37" width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative;border-radius:20px;box-shadow:0 0 40px #00f2fe44;"></iframe></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>О компании</h3>
+                    <p>Мы предлагаем широкий выбор техники и аксессуаров по доступным ценам. Наша цель - сделать современные технологии доступными каждому.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@tehnika.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ТЦ Галерея, Санкт-Петербург</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="vacancies.html">Вакансии</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Мы принимаем</h3>
+                    <div class="payment-methods">
+                        <img src="icons/visa.svg" alt="Visa" class="payment-icon">
+                        <img src="icons/mastercard.svg" alt="Mastercard" class="payment-icon">
+                        <img src="icons/mir.svg" alt="МИР" class="payment-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Техника. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

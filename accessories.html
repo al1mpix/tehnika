@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аксессуары | Техника</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="js/accessories.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+        <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +7 (999) 123-45-67</span>
+                    <span><i class="fas fa-envelope"></i> info@tehnika.ru</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Техника</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn-search"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cartCount">0</span></a>
+                    <a href="#" class="btn-account"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="catalog-page">
+        <div class="container">
+            <h1 class="section-title">Аксессуары</h1>
+            <div class="catalog-layout">
+                <aside class="filters-bar">
+                    <h3>Фильтры</h3>
+                    <div class="filter-group">
+                        <h4>Цена, ₽</h4>
+                        <div class="price-range">
+                            <input type="number" id="minPrice" placeholder="От">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" placeholder="До">
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <h4>Бренд</h4>
+                        <div class="brands-list" id="brandList"></div>
+                    </div>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Поиск по аксессуарам...">
+                    <div class="filter-actions">
+                        <button class="apply-filters">Применить</button>
+                        <button class="reset-filters">Сбросить</button>
+                    </div>
+                </aside>
+                <div class="catalog-content">
+                    <div class="products-grid" id="productsGrid"></div>
+                    <div class="pagination" id="pagination"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>О компании</h3>
+                    <p>Мы предлагаем широкий выбор техники и аксессуаров по доступным ценам. Наша цель - сделать современные технологии доступными каждому.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@tehnika.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ТЦ Галерея, Санкт-Петербург</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="vacancies.html">Вакансии</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Мы принимаем</h3>
+                    <div class="payment-methods">
+                        <img src="icons/visa.svg" alt="Visa" class="payment-icon">
+                        <img src="icons/mastercard.svg" alt="Mastercard" class="payment-icon">
+                        <img src="icons/mir.svg" alt="МИР" class="payment-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Техника. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

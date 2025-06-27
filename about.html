@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О компании - Техника</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +7 (999) 123-45-67</span>
+                    <span><i class="fas fa-envelope"></i> info@tehnika.ru</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Техника</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="about.html" class="active">О компании</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn-search"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cartCount">0</span></a>
+                    <a href="#" class="btn-account"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="page-header" style="position:relative;overflow:hidden;">
+            <div class="container">
+                <h1>О компании</h1>
+                <p>Мы делаем современные технологии доступными каждому</p>
+                <svg class="hero-neon-bg" width="100%" height="120" viewBox="0 0 1200 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;bottom:0;z-index:0;pointer-events:none;">
+                    <defs>
+                        <linearGradient id="neon1" x1="0" y1="0" x2="1200" y2="120" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00f2fe"/>
+                            <stop offset="1" stop-color="#4facfe"/>
+                        </linearGradient>
+                    </defs>
+                    <polyline points="0,100 200,60 400,80 600,40 800,100 1000,60 1200,80" stroke="url(#neon1)" stroke-width="6" fill="none" filter="url(#glow)"/>
+                    <circle cx="200" cy="60" r="8" fill="#00f2fe" filter="url(#glow)"/>
+                    <circle cx="600" cy="40" r="10" fill="#4facfe" filter="url(#glow)"/>
+                    <circle cx="1000" cy="60" r="8" fill="#00f2fe" filter="url(#glow)"/>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </svg>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-history"></i>
+                        <h3>Наша история</h3>
+                        <p>Компания "Электроника" была основана в 2010 году с целью сделать современные технологии доступными для каждого. За это время мы выросли из небольшого магазина в крупную сеть с представительствами по всей России.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Наша миссия</h3>
+                        <p>Мы стремимся сделать современные технологии доступными каждому, предоставляя качественные товары по справедливым ценам и обеспечивая отличный сервис.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Наши достижения</h3>
+                        <p>Более 100 000 довольных клиентов, свыше 50 000 успешных доставок и рейтинг 4.9 из 5 на основе отзывов покупателей.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Наша команда</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-member-info">
+                            <h3>Александр Петров</h3>
+                            <p>Генеральный директор</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-member-info">
+                            <h3>Мария Иванова</h3>
+                            <p>Руководитель отдела продаж</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-member-info">
+                            <h3>Дмитрий Сидоров</h3>
+                            <p>Технический директор</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="team-member-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-member-info">
+                            <h3>Елена Смирнова</h3>
+                            <p>Руководитель клиентского сервиса</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>О компании</h3>
+                    <p>Мы предлагаем широкий выбор техники и аксессуаров по доступным ценам. Наша цель - сделать современные технологии доступными каждому.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@tehnika.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ТЦ Галерея, Санкт-Петербург</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="vacancies.html">Вакансии</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Мы принимаем</h3>
+                    <div class="payment-methods">
+                        <img src="icons/visa.svg" alt="Visa" class="payment-icon">
+                        <img src="icons/mastercard.svg" alt="Mastercard" class="payment-icon">
+                        <img src="icons/mir.svg" alt="МИР" class="payment-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Техника. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

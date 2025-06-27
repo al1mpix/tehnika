@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вакансии - Техника</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +7 (999) 123-45-67</span>
+                    <span><i class="fas fa-envelope"></i> info@tehnika.ru</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Техника</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="vacancies.html" class="active">Вакансии</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn-search"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cartCount">0</span></a>
+                    <a href="#" class="btn-account"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="page-header" style="position:relative;overflow:hidden;">
+            <div class="container">
+                <h1>Вакансии</h1>
+                <p>Присоединяйтесь к нашей команде профессионалов</p>
+                <svg class="hero-neon-bg" width="100%" height="120" viewBox="0 0 1200 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;bottom:0;z-index:0;pointer-events:none;">
+                    <defs>
+                        <linearGradient id="neon1" x1="0" y1="0" x2="1200" y2="120" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00f2fe"/>
+                            <stop offset="1" stop-color="#4facfe"/>
+                        </linearGradient>
+                    </defs>
+                    <polyline points="0,100 200,60 400,80 600,40 800,100 1000,60 1200,80" stroke="url(#neon1)" stroke-width="6" fill="none" filter="url(#glow)"/>
+                    <circle cx="200" cy="60" r="8" fill="#00f2fe" filter="url(#glow)"/>
+                    <circle cx="600" cy="40" r="10" fill="#4facfe" filter="url(#glow)"/>
+                    <circle cx="1000" cy="60" r="8" fill="#00f2fe" filter="url(#glow)"/>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </svg>
+            </div>
+        </section>
+
+        <section class="vacancies-section">
+            <div class="container">
+                <div class="vacancies-grid">
+                    <div class="vacancy-card">
+                        <div class="vacancy-header">
+                            <h2>Менеджер по продажам</h2>
+                            <span class="salary">от 80 000 ₽</span>
+                        </div>
+                        <div class="vacancy-details">
+                            <div class="vacancy-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Санкт-Петербург, ТЦ Галерея</span>
+                            </div>
+                            <div class="vacancy-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Полный день</span>
+                            </div>
+                            <div class="vacancy-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Опыт от 1 года</span>
+                            </div>
+                        </div>
+                        <div class="vacancy-description">
+                            <h3>Обязанности:</h3>
+                            <ul>
+                                <li>Работа с клиентами по телефону и в чате</li>
+                                <li>Консультация по товарам и услугам</li>
+                                <li>Оформление заказов</li>
+                                <li>Работа с возражениями</li>
+                            </ul>
+                            <h3>Требования:</h3>
+                            <ul>
+                                <li>Опыт работы в продажах от 1 года</li>
+                                <li>Знание техники и электроники</li>
+                                <li>Грамотная речь</li>
+                                <li>Умение работать в команде</li>
+                            </ul>
+                            <h3>Условия:</h3>
+                            <ul>
+                                <li>Официальное трудоустройство</li>
+                                <li>График работы 5/2</li>
+                                <li>Обучение за счет компании</li>
+                                <li>Корпоративные мероприятия</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary">Откликнуться</button>
+                    </div>
+
+                    <div class="vacancy-card">
+                        <div class="vacancy-header">
+                            <h2>Специалист технической поддержки</h2>
+                            <span class="salary">от 70 000 ₽</span>
+                        </div>
+                        <div class="vacancy-details">
+                            <div class="vacancy-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Санкт-Петербург, ТЦ Галерея</span>
+                            </div>
+                            <div class="vacancy-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Полный день</span>
+                            </div>
+                            <div class="vacancy-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Опыт от 1 года</span>
+                            </div>
+                        </div>
+                        <div class="vacancy-description">
+                            <h3>Обязанности:</h3>
+                            <ul>
+                                <li>Консультация клиентов по техническим вопросам</li>
+                                <li>Решение проблем с товарами</li>
+                                <li>Работа с гарантийными случаями</li>
+                                <li>Ведение документации</li>
+                            </ul>
+                            <h3>Требования:</h3>
+                            <ul>
+                                <li>Опыт работы в технической поддержке</li>
+                                <li>Знание техники и электроники</li>
+                                <li>Умение объяснять технические моменты</li>
+                                <li>Опыт работы с CRM-системами</li>
+                            </ul>
+                            <h3>Условия:</h3>
+                            <ul>
+                                <li>Официальное трудоустройство</li>
+                                <li>Гибкий график</li>
+                                <li>Возможность удаленной работы</li>
+                                <li>Корпоративное обучение</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary">Откликнуться</button>
+                    </div>
+
+                    <div class="vacancy-card">
+                        <div class="vacancy-header">
+                            <h2>Контент-менеджер</h2>
+                            <span class="salary">от 60 000 ₽</span>
+                        </div>
+                        <div class="vacancy-details">
+                            <div class="vacancy-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Санкт-Петербург, ТЦ Галерея</span>
+                            </div>
+                            <div class="vacancy-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Полный день</span>
+                            </div>
+                            <div class="vacancy-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Опыт от 1 года</span>
+                            </div>
+                        </div>
+                        <div class="vacancy-description">
+                            <h3>Обязанности:</h3>
+                            <ul>
+                                <li>Наполнение сайта контентом</li>
+                                <li>Написание описаний товаров</li>
+                                <li>Работа с изображениями</li>
+                                <li>Ведение блога</li>
+                            </ul>
+                            <h3>Требования:</h3>
+                            <ul>
+                                <li>Опыт работы с контентом</li>
+                                <li>Грамотность</li>
+                                <li>Знание основ SEO</li>
+                                <li>Умение работать с CMS</li>
+                            </ul>
+                            <h3>Условия:</h3>
+                            <ul>
+                                <li>Официальное трудоустройство</li>
+                                <li>Гибкий график</li>
+                                <li>Возможность удаленной работы</li>
+                                <li>Креативная атмосфера</li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-primary">Откликнуться</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>О компании</h3>
+                    <p>Мы предлагаем широкий выбор техники и аксессуаров по доступным ценам. Наша цель - сделать современные технологии доступными каждому.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@tehnika.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ТЦ Галерея, Санкт-Петербург</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="vacancies.html">Вакансии</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Мы принимаем</h3>
+                    <div class="payment-methods">
+                        <img src="icons/visa.svg" alt="Visa" class="payment-icon">
+                        <img src="icons/mastercard.svg" alt="Mastercard" class="payment-icon">
+                        <img src="icons/mir.svg" alt="МИР" class="payment-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Техника. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

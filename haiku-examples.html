@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хайку описания товаров</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #00eaff, #00bfff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .example-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 4px solid #00eaff;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .example-card::before {
+            content: "🌸";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            font-size: 20px;
+            background: white;
+            border-radius: 50%;
+            padding: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .category-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .haiku-text {
+            font-style: italic;
+            line-height: 1.6;
+            color: #555;
+            text-align: center;
+            font-size: 1rem;
+            background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+            border-radius: 12px;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .haiku-text::before {
+            content: '🌸';
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-size: 1.2rem;
+            opacity: 0.6;
+        }
+        
+        .haiku-text::after {
+            content: '🌙';
+            position: absolute;
+            bottom: 8px;
+            left: 12px;
+            font-size: 1.2rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌸 Хайку описания товаров 🍃</h1>
+        
+        <div class="examples-grid">
+            <div class="example-card">
+                <div class="category-title">📱 Смартфоны</div>
+                <div class="haiku-text">
+                    В ладони свет — тишина цифрового сада.<br>
+                    Экран OLED 6.7", память 256 ГБ, срок доставки — 2 луны.
+                </div>
+            </div>
+            
+            <div class="example-card">
+                <div class="category-title">💻 Ноутбуки</div>
+                <div class="haiku-text">
+                    Тихий гул вентиляторов — шепот цифрового ветра.<br>
+                    Процессор Intel i7, память 16 ГБ, срок доставки — 3 луны.
+                </div>
+            </div>
+            
+            <div class="example-card">
+                <div class="category-title">📱 Планшеты</div>
+                <div class="haiku-text">
+                    Лунный свет — отражение в черном стекле.<br>
+                    Экран 12.9" IPS, память 256 ГБ, срок доставки — 2 луны.
+                </div>
+            </div>
+            
+            <div class="example-card">
+                <div class="category-title">🎧 Аксессуары</div>
+                <div class="haiku-text">
+                    Тихий шелест ткани — 100% хлопок, плотность 240г/м².<br>
+                    Совместимость универсальная, срок доставки — 3 луны.
+                </div>
+            </div>
+            
+            <div class="example-card">
+                <div class="category-title">📱 Смартфоны</div>
+                <div class="haiku-text">
+                    Утренний звонок — капля росы на стекле.<br>
+                    Процессор 8-ядерный, камера 108 Мп, срок доставки — 3 луны.
+                </div>
+            </div>
+            
+            <div class="example-card">
+                <div class="category-title">💻 Ноутбуки</div>
+                <div class="haiku-text">
+                    Утренний свет — отражение на алюминиевом корпусе.<br>
+                    Экран 15.6" IPS, SSD 512 ГБ, срок доставки — 2 луны.
+                </div>
+            </div>
+            
+            <div class="example-card">
+                <div class="category-title">🎧 Аксессуары</div>
+                <div class="haiku-text">
+                    Капля дождя — звон в беспроводных наушниках.<br>
+                    Bluetooth 5.0, время работы 8 часов, срок доставки — 3 луны.
+                </div>
+            </div>
+            
+            <div class="example-card">
+                <div class="category-title">📱 Планшеты</div>
+                <div class="haiku-text">
+                    Тихий шелест — касание пальца по экрану.<br>
+                    Процессор 8-ядерный, камера 48 Мп, срок доставки — 3 луны.
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; color: #666; font-style: italic;">
+            <p>Все товары теперь описываются в стиле японских хайку 🌸</p>
+            <p>Каждое описание сочетает поэзию и технические характеристики</p>
+        </div>
+    </div>
+</body>
+</html> 

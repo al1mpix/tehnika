@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="dynamicTitle">Smartphone X | Мой магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Микроразметка -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Smartphone X",
+        "image": "https://example.com/images/products/smartphone-x.jpg",
+        "description": "Флагманский смартфон с лучшей камерой 2024 года",
+        "brand": {
+            "@type": "Brand",
+            "name": "TechBrand"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://example.com/product/smartphone-x",
+            "priceCurrency": "RUB",
+            "price": "34999",
+            "priceValidUntil": "2024-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "reviewCount": "125"
+        }
+    }
+    </script>
+    <script>
+    // Динамический title для SEO: если есть бренд — с брендом, если нет — 'Аналог ...'
+    document.addEventListener('DOMContentLoaded', function() {
+        var h1 = document.querySelector('.product-info h1');
+        var brand = 'TechBrand'; // пример, можно брать из данных товара
+        var origBrand = '';
+        // Попробуем найти бренд в характеристиках
+        var specs = document.querySelector('.specs-table');
+        if (specs) {
+            for (let row of specs.rows) {
+                if (row.cells[0] && row.cells[0].textContent.toLowerCase().includes('бренд')) {
+                    brand = row.cells[1].textContent.trim();
+                }
+                if (row.cells[0] && row.cells[0].textContent.toLowerCase().includes('аналог')) {
+                    origBrand = row.cells[1].textContent.trim();
+                }
+            }
+        }
+        var title = h1 ? h1.textContent.trim() : 'Товар';
+        if (brand && brand !== '-') {
+            document.title = title + ' | ' + brand + ' | Мой магазин';
+        } else if (origBrand) {
+            document.title = 'Аналог (' + origBrand + ') | Мой магазин';
+        } else {
+            document.title = title + ' | Мой магазин';
+        }
+        // Микроразметка: если нет бренда, подставить "Аналог ..."
+        var ld = document.querySelector('script[type="application/ld+json"]');
+        if (ld) {
+            let data = JSON.parse(ld.textContent);
+            if (!brand || brand === '-') {
+                data.brand = {"@type":"Brand","name":"Аналог"};
+            }
+            ld.textContent = JSON.stringify(data, null, 2);
+        }
+    });
+    </script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+    </script>
+
+    <main class="product-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="/index.html">Главная</a> > <a href="/catalog/electronics">Электроника</a> > <a href="/catalog/smartphones">Смартфоны</a> > <span>Smartphone X</span>
+            </div>
+            
+            <div class="product-layout">
+                <!-- Галерея изображений -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="../images/products/smartphone-x-large.jpg" alt="Smartphone X" id="mainProductImage">
+                    </div>
+                    <div class="thumbnails">
+                        <img src="../images/products/smartphone-x-thumb1.jpg" alt="Вид спереди">
+                        <img src="../images/products/smartphone-x-thumb2.jpg" alt="Вид сбоку">
+                        <img src="../images/products/smartphone-x-thumb3.jpg" alt="Камера">
+                        <img src="../images/products/smartphone-x-thumb4.jpg" alt="В комплекте">
+                    </div>
+                </div>
+                
+                <!-- Основная информация о товаре -->
+                <div class="product-info">
+                    <h1>Smartphone X</h1>
+                    <div class="sku">Артикул: SMX256GB</div>
+                    
+                    <div class="rating-and-reviews">
+                        <div class="rating">★★★★☆ <span class="reviews-count">125 отзывов</span></div>
+                        <a href="#reviews" class="write-review">Написать отзыв</a>
+                    </div>
+                    
+                    <div class="price-block">
+                        <div class="current-price">₽34,999</div>
+                        <div class="old-price">₽39,999</div>
+                        <div class="discount">-12%</div>
+                        <div class="bonus">+349 бонусов</div>
+                    </div>
+                    
+                    <div class="availability">В наличии: 15 шт.</div>
+                    
+                    <div class="actions">
+                        <div class="quantity">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="plus">+</button>
+                        </div>
+                        <button class="buy-btn">Купить сейчас</button>
+                        <button class="add-to-cart">В корзину</button>
+                        <button class="wishlist">♡ В избранное</button>
+                    </div>
+                    
+                    <div class="delivery-info">
+                        <div class="delivery-option">
+                            <img src="../icons/delivery.svg" alt="Доставка">
+                            <span>Доставка завтра - 350 ₽</span>
+                        </div>
+                        <div class="pickup-option">
+                            <img src="../icons/pickup.svg" alt="Самовывоз">
+                            <span>Самовывоз сегодня из 3 магазинов</span>
+                        </div>
+                    </div>
+                    
+                    <div class="share-buttons">
+                        <span>Поделиться:</span>
+                        <a href="#" class="share-vk">VK</a>
+                        <a href="#" class="share-tg">Telegram</a>
+                        <a href="#" class="share-wa">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Табы с дополнительной информацией -->
+            <div class="product-tabs">
+                <ul class="tabs-nav">
+                    <li class="active"><a href="#description">Описание</a></li>
+                    <li><a href="#specs">Характеристики</a></li>
+                    <li><a href="#reviews">Отзывы (125)</a></li>
+                    <li><a href="#delivery">Доставка и оплата</a></li>
+                    <li><a href="#questions">Вопросы и ответы</a></li>
+                </ul>
+                
+                <div class="tabs-content">
+                    <div id="description" class="tab-pane active">
+                        <h3>Описание товара</h3>
+                        <div class="haiku-desc">
+                            В ладони свет — тишина цифрового сада.<br>
+                            Экран OLED 6.7", память 256 ГБ, срок доставки — 2 луны.
+                        </div>
+                        <div class="haiku-desc">
+                            Утренний звонок — капля росы на стекле.<br>
+                            Процессор 8-ядерный, камера 108 Мп, срок доставки — 3 луны.
+                        </div>
+                        <div class="haiku-desc">
+                            Вечерний свет — тени танцуют на экране.<br>
+                            Батарея 5000 мАч, быстрая зарядка, срок доставки — 2 луны.
+                        </div>
+                        <!-- Детальное описание -->
+                    </div>
+                    
+                    <div id="specs" class="tab-pane">
+                        <h3>Характеристики</h3>
+                        <table class="specs-table">
+                            <tr>
+                                <td>Экран</td>
+                                <td>6.7" AMOLED, 120 Гц</td>
+                            </tr>
+                            <!-- Остальные характеристики -->
+                        </table>
+                    </div>
+                    
+                    <div id="reviews" class="tab-pane">
+                        <h3>Отзывы о товаре</h3>
+                        <div class="reviews-list" id="reviewsList">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <span class="review-author">Анна</span>
+                                    <span class="review-date">12.01.2025</span>
+                                    <span class="rating">★★★★★</span>
+                                </div>
+                                <div class="review-text">Отличный смартфон, быстрая доставка!</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <span class="review-author">Игорь</span>
+                                    <span class="review-date">10.01.2025</span>
+                                    <span class="rating">★★★★☆</span>
+                                </div>
+                                <div class="review-text">Камера супер, автономность средняя.</div>
+                            </div>
+                        </div>
+                        <form id="addReviewForm" style="margin-top:18px;">
+                            <input type="text" id="reviewAuthor" placeholder="Ваше имя" required style="margin-bottom:8px;">
+                            <select id="reviewRating" required style="margin-bottom:8px;">
+                                <option value="5">5 ★★★★★</option>
+                                <option value="4">4 ★★★★☆</option>
+                                <option value="3">3 ★★★☆☆</option>
+                                <option value="2">2 ★★☆☆☆</option>
+                                <option value="1">1 ★☆☆☆☆</option>
+                            </select>
+                            <textarea id="reviewText" placeholder="Ваш отзыв" required style="margin-bottom:8px;"></textarea>
+                            <button type="submit" class="btn btn-primary">Оставить отзыв</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Остальные табы -->
+                </div>
+            </div>
+            
+            <!-- Сопутствующие товары -->
+            <section class="related-products">
+                <h2>С этим товаром покупают</h2>
+                <div class="products-grid">
+                    <!-- Карточки сопутствующих товаров -->
+                </div>
+            </section>
+            
+            <!-- Похожие товары -->
+            <section class="similar-products">
+                <h2>Похожие товары</h2>
+                <div class="products-grid">
+                    <!-- Карточки похожих товаров -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Подвал как на главной -->
+
+    <script src="js/main.js"></script>
+    <script>
+    // Отзывы: добавление без перезагрузки
+    const reviewsList = document.getElementById('reviewsList');
+    document.getElementById('addReviewForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const author = document.getElementById('reviewAuthor').value.trim() || 'Гость';
+        const rating = document.getElementById('reviewRating').value;
+        const text = document.getElementById('reviewText').value.trim();
+        if (!text) return;
+        const date = new Date().toLocaleDateString('ru-RU');
+        let stars = '★★★★★☆☆☆☆☆'.slice(5-rating, 10-rating);
+        const card = document.createElement('div');
+        card.className = 'review-card';
+        card.innerHTML = `<div class="review-header"><span class="review-author">${author}</span><span class="review-date">${date}</span><span class="rating">${stars}</span></div><div class="review-text">${text}</div>`;
+        reviewsList.prepend(card);
+        this.reset();
+    });
+    </script>
+</body>
+</html>

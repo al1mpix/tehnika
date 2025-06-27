@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль | Мой магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <main class="profile-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> > <a href="account.html">Личный кабинет</a> > <span>Профиль</span>
+            </div>
+            <h1>Профиль</h1>
+            <form id="profileForm" class="profile-form">
+                <div class="form-group">
+                    <label for="profileName">Имя</label>
+                    <input type="text" id="profileName" required>
+                </div>
+                <div class="form-group">
+                    <label for="profileEmail">Email</label>
+                    <input type="email" id="profileEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="profilePhone">Телефон</label>
+                    <input type="tel" id="profilePhone">
+                </div>
+                <div class="form-group">
+                    <label for="profilePass">Пароль</label>
+                    <input type="password" id="profilePass" placeholder="Новый пароль (необязательно)">
+                </div>
+                <button type="submit" class="btn btn-primary">Сохранить</button>
+                <a href="account.html" class="btn">Назад</a>
+            </form>
+        </div>
+    </main>
+    <script src="js/account.js"></script>
+</body>
+</html> 

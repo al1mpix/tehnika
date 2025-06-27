@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров | Мой магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +7 (999) 123-45-67</span>
+                    <span><i class="fas fa-envelope"></i> info@electronics.ru</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Электроника</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn-search"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cartCount">0</span></a>
+                    <a href="#" class="btn-account"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="catalog-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="/">Главная</a> > <span>Каталог</span>
+            </div>
+            
+            <div class="catalog-layout">
+                <!-- Фильтры -->
+                <aside class="filters">
+                    <h3>Фильтры</h3>
+                    <div class="filter-group">
+                        <input type="text" id="searchInput" class="filter-search-input" placeholder="Поиск по товарам...">
+                    </div>
+                    <div class="filter-group">
+                        <h4>Цена, ₽</h4>
+                        <div class="price-range">
+                            <input type="number" id="minPrice" placeholder="От">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" placeholder="До">
+                        </div>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Бренд</h4>
+                        <ul class="brand-list">
+                            <li><label><input type="checkbox" name="brand" value="samsung"> Samsung</label></li>
+                            <!-- Другие бренды -->
+                        </ul>
+                    </div>
+                    
+                    <!-- Другие фильтры (цвет, размер и т.д.) -->
+                    
+                    <button class="apply-filters">Применить</button>
+                    <button class="reset-filters">Сбросить</button>
+                </aside>
+                
+                <!-- Основной контент каталога -->
+                <div class="catalog-content">
+                    <div class="catalog-header">
+                        <h1>Каталог товаров</h1>
+                        <div class="sorting">
+                            <label for="sort">Сортировка:</label>
+                            <select id="sort">
+                                <option value="popular">По популярности</option>
+                                <option value="price-asc">По возрастанию цены</option>
+                                <option value="price-desc">По убыванию цены</option>
+                                <option value="newest">По новизне</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="products-grid">
+                        <!-- Карточки товаров будут загружаться динамически -->
+                        <div class="product-card">
+                            <a href="/product/smartphone-x">
+                                <img src="images/products/smartphone-x.jpg" alt="Smartphone X" loading="lazy">
+                                <h3>Smartphone X</h3>
+                                <div class="rating">
+                                    ★★★★☆ <span class="reviews-count">(125)</span>
+                                </div>
+                                <div class="price">₽34,999 <span class="old-price">₽39,999</span></div>
+                                <div class="actions">
+                                    <button class="buy-btn">В корзину</button>
+                                    <button class="wishlist-btn">♡</button>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Еще товары -->
+                    </div>
+                    
+                    <div class="pagination">
+                        <a href="#" class="prev">← Назад</a>
+                        <a href="#" class="page active">1</a>
+                        <a href="#" class="page">2</a>
+                        <a href="#" class="page">3</a>
+                        <span class="dots">...</span>
+                        <a href="#" class="next">Вперед →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал как на главной -->
+
+    <script src="js/catalog.js"></script>
+</body>
+</html>

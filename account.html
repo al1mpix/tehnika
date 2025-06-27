@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет | Мой магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <main class="account-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> > <span>Личный кабинет</span>
+            </div>
+            <div class="account-layout">
+                <aside class="account-sidebar">
+                    <div class="user-info">
+                        <div class="avatar">ИИ</div>
+                        <div class="name">Иван Иванов</div>
+                        <div class="email">ivan@example.com</div>
+                    </div>
+                    <nav class="account-menu">
+                        <ul>
+                            <li class="active"><a href="#" id="ordersTab">Мои заказы</a></li>
+                            <li><a href="profile.html">Профиль</a></li>
+                            <li><a href="addresses.html">Адреса доставки</a></li>
+                            <li><a href="404-wishlist.html" id="wishlistTab">Избранное</a></li>
+                            <li><a href="settings.html">Настройки</a></li>
+                            <li><a href="#" id="logoutLink">Выйти</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="account-content">
+                    <section class="orders-history">
+                        <h2>История заказов</h2>
+                        <div class="orders-list">
+                            <!-- Здесь будут заказы пользователя -->
+                        </div>
+                    </section>
+                    <section class="account-wishlist" id="wishlistSection">
+                        <h2>Избранное</h2>
+                        <div class="wishlist-grid">
+                            <!-- Товары в избранном -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/account.js"></script>
+    <script>
+        document.getElementById('logoutLink')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('currentUser');
+            window.location.href = 'index.html';
+        });
+        // --- 404 для избранного ---
+        document.getElementById('wishlistTab')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Скрываем профиль
+            const layout = document.querySelector('.account-layout');
+            if (layout) layout.style.display = 'none';
+            // Показываем только ошибку
+            const container = document.querySelector('.container');
+            container.innerHTML += `
+                <div id="wishlist404" style="text-align:center;padding:48px 12px;max-width:500px;margin:0 auto;">
+                    <div style="font-size:5rem;">404</div>
+                    <div style="font-size:1.5rem;color:#00eaff;margin-bottom:18px;">Favoritum non inventum est</div>
+                    <div style="color:#b8eaff;margin-bottom:24px;">
+                        "Ordinem meum perdidi, heu misere!<br>
+                        In tenebris quaero, sed spes non est.<br>
+                        Ubi es, o mercator, spes mea ultima?<br>
+                        Redde mihi gaudium, redde mihi ordinem!"
+                    </div>
+                    <a href="index.html" class="btn btn-primary" style="margin-top:18px;">Redire ad emporium</a>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

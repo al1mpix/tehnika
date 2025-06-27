@@ -1,0 +1,48 @@
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +7 (999) 123-45-67</span>
+                <span><i class="fas fa-envelope"></i> info@electronics.ru</span>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="container">
+            <button class="burger" aria-label="Открыть меню" style="display:none;"><i class="fas fa-bars"></i></button>
+            <div class="logo">
+                <h1>Электроника</h1>
+            </div>
+            <div class="mobile-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn-search"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cartCount">0</span></a>
+                    <a href="#" class="btn-account"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<script>
+// Мобильное меню бургер
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+if (burger && navLinks) {
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        burger.classList.toggle('active');
+    });
+}
+</script> 

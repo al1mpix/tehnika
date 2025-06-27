@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа | Мой магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+    <script src="js/checkout.js"></script>
+</head>
+<body>
+    <main class="checkout-page">
+        <div class="container">
+            <div class="breadcrumbs">
+                <a href="index.html">Главная</a> > <a href="#">Корзина</a> > <span>Оформление заказа</span>
+            </div>
+            <h1 class="section-title">Оформление заказа</h1>
+            <div class="checkout-layout">
+                <div class="checkout-form">
+                    <form id="orderForm">
+                        <div class="checkout-steps">
+                            <div class="step active" data-step="1">1. Контактные данные</div>
+                            <div class="step" data-step="2">2. Доставка</div>
+                            <div class="step" data-step="3">3. Оплата</div>
+                            <div class="step" data-step="4">4. Подтверждение</div>
+                        </div>
+                        <div class="form-step active" id="step1">
+                            <h2>Контактные данные</h2>
+                            <div class="form-group">
+                                <label for="fullName">ФИО*</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон*</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="orderEmail">Email*</label>
+                                <input type="email" id="orderEmail" name="orderEmail" required>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="createAccount">
+                                <label for="createAccount">Создать аккаунт для быстрых покупок</label>
+                            </div>
+                            <button type="button" class="next-step btn btn-primary" data-next="2">Продолжить</button>
+                        </div>
+                        <div class="form-step" id="step2">
+                            <h2>Способ доставки</h2>
+                            <div class="delivery-options">
+                                <div class="delivery-option">
+                                    <input type="radio" name="delivery" id="courier" checked>
+                                    <label for="courier">
+                                        <span class="title">Курьерская доставка</span>
+                                        <span class="price">350 ₽</span>
+                                        <span class="time">Доставка 1-2 дня</span>
+                                    </label>
+                                </div>
+                                <div class="delivery-option">
+                                    <input type="radio" name="delivery" id="pickup">
+                                    <label for="pickup">
+                                        <span class="title">Самовывоз</span>
+                                        <span class="price">Бесплатно</span>
+                                        <span class="time">Сегодня из 3 пунктов</span>
+                                    </label>
+                                </div>
+                                <div class="delivery-option">
+                                    <input type="radio" name="delivery" id="pigeon">
+                                    <label for="pigeon">
+                                        <span class="title">Голубиная Почта <span style='font-size:0.95em;'>(до 100 г)</span></span>
+                                        <span class="price">99 ₽</span>
+                                        <span class="time">3-7 дней</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="delivery-address">
+                                <h3>Адрес доставки</h3>
+                                <div class="form-group">
+                                    <label for="city">Город*</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="street">Улица*</label>
+                                    <input type="text" id="street" name="street" required>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="prev-step btn" data-prev="1">Назад</button>
+                                <button type="button" class="next-step btn btn-primary" data-next="3">Продолжить</button>
+                            </div>
+                        </div>
+                        <div class="form-step" id="step3">
+                            <h2>Способ оплаты</h2>
+                            <div class="payment-options">
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" id="card" checked>
+                                    <label for="card">
+                                        <img src="icons/card.svg" alt="Карта">
+                                        <span>Банковской картой</span>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" id="cash">
+                                    <label for="cash">
+                                        <img src="icons/cash.svg" alt="Наличные">
+                                        <span>Наличными при получении</span>
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" name="payment" id="installment">
+                                    <label for="installment">
+                                        <img src="icons/installment.svg" alt="Рассрочка">
+                                        <span>Рассрочка 0%</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="promo-code">
+                                <label for="promo">Промокод</label>
+                                <div class="promo-input">
+                                    <input type="text" id="promo" placeholder="Введите промокод">
+                                    <button type="button" id="applyPromo" class="btn">Применить</button>
+                                </div>
+                                <div id="promoMessage"></div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="prev-step btn" data-prev="2">Назад</button>
+                                <button type="button" class="next-step btn btn-primary" data-next="4">Продолжить</button>
+                            </div>
+                        </div>
+                        <div class="form-step" id="step4">
+                            <h2>Подтверждение заказа</h2>
+                            <div class="order-summary">
+                                <h3>Ваш заказ</h3>
+                                <div class="order-items">
+                                    <!-- Товары в заказе -->
+                                </div>
+                                <div class="order-totals">
+                                    <div class="total-row">
+                                        <span>Товары (3)</span>
+                                        <span>104,997 ₽</span>
+                                    </div>
+                                    <div class="total-row">
+                                        <span>Доставка</span>
+                                        <span>350 ₽</span>
+                                    </div>
+                                    <div class="total-row promo">
+                                        <span>Промокод</span>
+                                        <span>-5,000 ₽</span>
+                                    </div>
+                                    <div class="total-row grand-total">
+                                        <span>Итого</span>
+                                        <span>100,347 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-details">
+                                <h3>Контактные данные</h3>
+                                <div id="contactDetailsReview"></div>
+                                <h3>Доставка</h3>
+                                <div id="deliveryDetailsReview"></div>
+                                <h3>Оплата</h3>
+                                <div id="paymentDetailsReview"></div>
+                            </div>
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="agreeTerms" required>
+                                <label for="agreeTerms">Я согласен с <a href="/terms">условиями покупки</a> и <a href="/privacy">политикой конфиденциальности</a>*</label>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="prev-step btn" data-prev="3">Назад</button>
+                                <button type="button" id="placeOrderBtn" class="submit-order btn btn-primary">Оформить заказ</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <aside class="order-summary-sidebar">
+                    <h3>Ваш заказ</h3>
+                    <div class="order-items">
+                        <!-- Товары в заказе -->
+                    </div>
+                    <div class="order-totals">
+                        <!-- Итоговые суммы -->
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

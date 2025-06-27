@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техника - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Предзагрузка критических ресурсов -->
+    <link rel="preload" href="images/hero-banner.jpg" as="image">
+    <link rel="preload" href="js/main.js" as="script">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+        <div class="container">
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> +7 (999) 123-45-67</span>
+                    <span><i class="fas fa-envelope"></i> info@tehnika.ru</span>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Техника</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="vacancies.html">Вакансии</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn-search"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn-cart"><i class="fas fa-shopping-cart"></i> <span class="cart-count" id="cartCount">0</span></a>
+                    <a href="#" class="btn-account"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content" style="text-align:center;">
+                    <h2>Современная электроника для вашего дома</h2>
+                    <p>Широкий выбор смартфонов, ноутбуков и аксессуаров по доступным ценам</p>
+                </div>
+                <svg class="hero-neon-bg" width="100%" height="180" viewBox="0 0 1200 180" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;bottom:0;z-index:0;pointer-events:none;">
+                    <defs>
+                        <linearGradient id="neon1" x1="0" y1="0" x2="1200" y2="180" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00f2fe"/>
+                            <stop offset="1" stop-color="#4facfe"/>
+                        </linearGradient>
+                    </defs>
+                    <polyline points="0,160 200,120 400,140 600,100 800,160 1000,120 1200,140" stroke="url(#neon1)" stroke-width="6" fill="none" filter="url(#glow)"/>
+                    <circle cx="200" cy="120" r="10" fill="#00f2fe" filter="url(#glow)"/>
+                    <circle cx="600" cy="100" r="12" fill="#4facfe" filter="url(#glow)"/>
+                    <circle cx="1000" cy="120" r="10" fill="#00f2fe" filter="url(#glow)"/>
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </svg>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Категории товаров</h2>
+                <div class="categories-grid">
+                    <a href="smartphones.html" class="category-card" target="_blank">
+                        <div class="category-icon">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="16" y="8" width="24" height="40" rx="4" stroke="#00eaff" stroke-width="3.5"/>
+                                <circle cx="28" cy="44" r="2" fill="#00eaff"/>
+                            </svg>
+                        </div>
+                        <h3>Смартфоны</h3>
+                        <p>Более 100 моделей</p>
+                    </a>
+                    <a href="laptops.html" class="category-card" target="_blank">
+                        <div class="category-icon">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="16" width="36" height="20" rx="3" stroke="#00eaff" stroke-width="3.5"/>
+                                <rect x="16" y="40" width="24" height="3" rx="1.5" fill="#00eaff"/>
+                            </svg>
+                        </div>
+                        <h3>Ноутбуки</h3>
+                        <p>Более 50 моделей</p>
+                    </a>
+                    <a href="tablets.html" class="category-card" target="_blank">
+                        <div class="category-icon">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="12" y="12" width="32" height="32" rx="4" stroke="#00eaff" stroke-width="3.5"/>
+                                <circle cx="28" cy="38" r="2" fill="#00eaff"/>
+                            </svg>
+                        </div>
+                        <h3>Планшеты</h3>
+                        <p>Более 30 моделей</p>
+                    </a>
+                    <a href="accessories.html" class="category-card" target="_blank">
+                        <div class="category-icon">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 36C14 28 20 20 28 20C36 20 42 28 42 36" stroke="#00eaff" stroke-width="3.5" stroke-linecap="round"/>
+                                <circle cx="14" cy="36" r="4" fill="#00eaff"/>
+                                <circle cx="42" cy="36" r="4" fill="#00eaff"/>
+                            </svg>
+                    </div>
+                        <h3>Аксессуары</h3>
+                        <p>Более 200 товаров</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <h2 class="section-title">Популярные товары</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Хит</div>
+                        <div class="product-image">
+                            <img src="images/iphone.png" alt="iPhone 15 Pro" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>iPhone 15 Pro</h3>
+                            <div class="product-price">
+                                <span class="price">99 990 ₽</span>
+                                <span class="old-price">109 990 ₽</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart" data-name="iPhone 15 Pro" data-price="99990">В корзину</button>
+                            <button class="btn quick-order-btn" style="background:#C0FFEE;color:#222;margin-top:8px;" data-name="iPhone 15 Pro" data-price="99990" data-image="images/iphone.png">Оформить быстрый заказ</button>
+                            <button class="btn btn-wishlist" data-name="iPhone 15 Pro" data-price="99990" data-image="images/iphone.png">♡ В избранное</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-badge">Новинка</div>
+                        <div class="product-image">
+                            <img src="images/macbook.png" alt="MacBook Air M2" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>MacBook Air M2</h3>
+                            <div class="product-price">
+                                <span class="price">129 990 ₽</span>
+                                <span class="old-price">139 990 ₽</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart" data-name="MacBook Air M2" data-price="129990">В корзину</button>
+                            <button class="btn quick-order-btn" style="background:#C0FFEE;color:#222;margin-top:8px;" data-name="MacBook Air M2" data-price="129990" data-image="images/macbook.png">Оформить быстрый заказ</button>
+                            <button class="btn btn-wishlist" data-name="MacBook Air M2" data-price="129990" data-image="images/macbook.png">♡ В избранное</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/ipad.png" alt="iPad Pro 12.9" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>iPad Pro 12.9"</h3>
+                            <div class="product-price">
+                                <span class="price">149 990 ₽</span>
+                                <span class="old-price">159 990 ₽</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart" data-name="iPad Pro 12.9&quot;" data-price="149990">В корзину</button>
+                            <button class="btn quick-order-btn" style="background:#C0FFEE;color:#222;margin-top:8px;" data-name="iPad Pro 12.9&quot;" data-price="149990" data-image="images/ipad.png">Оформить быстрый заказ</button>
+                            <button class="btn btn-wishlist" data-name="iPad Pro 12.9&quot;" data-price="149990" data-image="images/ipad.png">♡ В избранное</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/акксессуар.png" alt="Аксессуар" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Аксессуар</h3>
+                            <div class="product-price">
+                                <span class="price">199 ₽</span>
+                            </div>
+                            <button class="btn btn-primary add-to-cart" data-name="Аксессуар" data-price="199">В корзину</button>
+                            <button class="btn quick-order-btn" style="background:#C0FFEE;color:#222;margin-top:8px;" data-name="Аксессуар" data-price="199" data-image="images/акксессуар.png">Оформить быстрый заказ</button>
+                            <button class="btn btn-wishlist" data-name="Аксессуар" data-price="199" data-image="images/акксессуар.png">♡ В избранное</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Мы вам предлагаем</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-truck"></i>
+                        <h3>Быструю доставку</h3>
+                        <p>Доставляем по всей России в течение 1-3 дней</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Гарантию качества</h3>
+                        <p>Официальная гарантия на все товары</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Удобную оплату</h3>
+                        <p>Различные способы оплаты, включая рассрочку</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Поддержку 24/7</h3>
+                        <p>Всегда на связи для решения ваших вопросов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reviews">
+            <div class="container">
+                <h2 class="section-title">Отзывы покупателей</h2>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Анна К.</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">15.03.2025</span>
+                        </div>
+                        <p class="review-text">Отличный магазин! Быстрая доставка, качественные товары. Приобрела iPhone 15 Pro, очень довольна покупкой. Рекомендую!</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Михаил П.</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">10.03.2025</span>
+                        </div>
+                        <p class="review-text">Купил MacBook Air M2. Отличный ноутбук, быстрая доставка, приятные цены. Спасибо за качественный сервис!</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Екатерина С.</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">05.03.2025</span>
+                        </div>
+                        <p class="review-text">Покупала планшет для ребёнка. Всё понравилось, доставка быстрая, консультанты помогли с выбором. Спасибо!</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Иван Л.</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">28.02.2025</span>
+                        </div>
+                        <p class="review-text">Заказывал аксессуары для iPhone. Всё пришло быстро, качество отличное. Буду заказывать ещё!</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Светлана М.</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">20.02.2025</span>
+                        </div>
+                        <p class="review-text">Очень довольна сервисом! Заказала ноутбук, всё оформили быстро, доставка на следующий день. Спасибо магазину!</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-author">
+                                <div class="author-avatar"><i class="fas fa-user"></i></div>
+                                <div class="author-info">
+                                    <h4>Денис Р.</h4>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="review-date">12.02.2025</span>
+                        </div>
+                        <p class="review-text">Покупал ноутбук для работы. Всё понравилось: сервис, доставка, упаковка. Магазин рекомендую!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subscribe-section">
+            <div class="container">
+                <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+                <p>Получайте первыми информацию о новых поступлениях и специальных предложениях</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Ваш email" required>
+                    <button type="submit">Подписаться</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Часто задаваемые вопросы</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">Как оформить заказ?</button>
+                        <div class="faq-answer">Выберите нужный товар, добавьте его в корзину и перейдите к оформлению заказа. Заполните контактные данные и выберите способ оплаты и доставки.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Какие способы оплаты доступны?</button>
+                        <div class="faq-answer">Вы можете оплатить заказ онлайн банковской картой, через электронные кошельки или при получении (наличными или картой курьеру).</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Сколько времени занимает доставка?</button>
+                        <div class="faq-answer">Доставка по Москве и области — 1-2 дня, по России — 2-7 дней в зависимости от региона и выбранного способа доставки.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Можно ли вернуть или обменять товар?</button>
+                        <div class="faq-answer">Да, вы можете вернуть или обменять товар в течение 14 дней при сохранении товарного вида и упаковки. Подробнее — в разделе "Гарантия и возврат".</div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Как получить консультацию?</button>
+                        <div class="faq-answer">Вы можете написать нам в чат на сайте, позвонить по телефону или воспользоваться формой обратной связи на странице "Контакты".</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>О компании</h3>
+                    <p>Мы предлагаем широкий выбор техники и аксессуаров по доступным ценам. Наша цель - сделать современные технологии доступными каждому.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (999) 123-45-67</li>
+                        <li><i class="fas fa-envelope"></i> info@tehnika.ru</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ТЦ Галерея, Санкт-Петербург</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="blog.html">Блог</a></li>
+                        <li><a href="vacancies.html">Вакансии</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                <!-- Еще 3 колонки -->
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Техника. Все права защищены.</p>
+                <div class="payment-methods">
+                    <img src="icons/visa.svg" alt="Visa" class="payment-icon">
+                    <img src="icons/mastercard.svg" alt="Mastercard" class="payment-icon">
+                    <img src="icons/mir.svg" alt="МИР" class="payment-icon">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="authModal" style="display:none;position:fixed;z-index:1000;left:0;top:0;width:100vw;height:100vh;background:rgba(10,18,32,0.98);align-items:center;justify-content:center;">
+        <div style="background:#181c2a;padding:32px 28px 24px 28px;border-radius:18px;box-shadow:0 0 32px #00eaff33;max-width:360px;width:100%;margin:auto;">
+            <h2 style="color:#00eaff;text-align:center;margin-bottom:18px;">Вход</h2>
+            <form id="loginForm">
+                <input type="email" id="loginEmail" placeholder="Email" required style="margin-bottom:10px;width:100%;padding:10px;">
+                <input type="password" id="loginPass" placeholder="Пароль" required style="margin-bottom:16px;width:100%;padding:10px;">
+                <button type="submit" class="btn btn-primary" style="width:100%;margin-bottom:10px;">Войти</button>
+                <div style="text-align:center;margin-bottom:8px;"><a href="#" id="showRegister" style="color:#00eaff;">Нет аккаунта? Регистрация</a></div>
+            </form>
+            <form id="registerForm" style="display:none;">
+                <input type="text" id="regName" placeholder="Имя" required style="margin-bottom:10px;width:100%;padding:10px;">
+                <input type="email" id="regEmail" placeholder="Email" required style="margin-bottom:10px;width:100%;padding:10px;">
+                <input type="password" id="regPass" placeholder="Пароль" required style="margin-bottom:16px;width:100%;padding:10px;">
+                <button type="submit" class="btn btn-primary" style="width:100%;margin-bottom:10px;">Зарегистрироваться</button>
+                <div style="text-align:center;margin-bottom:8px;"><a href="#" id="showLogin" style="color:#00eaff;">Уже есть аккаунт? Войти</a></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // FAQ accordion functionality
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const answer = this.nextElementSibling;
+          // Скрыть все ответы и убрать active
+          document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
+          document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+          // Если этот ответ уже открыт — просто закроем
+          if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+            this.classList.remove('active');
+          } else {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            this.classList.add('active');
+          }
+        });
+      });
+    });
+    </script>
+    <script>
+      document.querySelectorAll('.quick-order-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const card = btn.closest('.product-card');
+          const name = btn.getAttribute('data-name') || card.querySelector('h3').textContent;
+          const price = btn.getAttribute('data-price') || card.querySelector('.price')?.textContent?.replace(/\D/g, '');
+          const image = btn.getAttribute('data-image') || card.querySelector('img')?.getAttribute('src');
+          const fastOrder = [{ name, price: parseInt(price), image, qty: 1 }];
+          localStorage.setItem('fastOrder', JSON.stringify(fastOrder));
+          window.location.href = 'checkout.html';
+        });
+      });
+    </script>
+</body>
+</html>
